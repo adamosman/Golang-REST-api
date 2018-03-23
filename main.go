@@ -116,6 +116,7 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 		counts[word]++
 	}
 	json, _ := json.MarshalIndent(counts, "", " ")
+	words := strings.Fields(str)
 	w.Header().Set("CONTENT-TYPE", "text/html; charset=UTF-8")
 	fmt.Fprintf(w, `<form action="/" method="post" enctype="multipart/form-data">
 					Upload a file<br>
@@ -124,7 +125,9 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 					</form>
 					<br>
 					<br>
-					<h1>%s</h1>`, json)
+					<h1>Unique word count: %s</h1>
+					<br>
+					<h1>Total word count: %v</h1>`, json, len(words))
 }
 
 // WordCount counts the frequency of each word
@@ -160,8 +163,4 @@ func main() {
 	// log.Fatal(http.ListenAndServe(":8000", r))
 	http.HandleFunc("/", Upload)
 	http.ListenAndServe(":8000", nil)
-	// r.HandleFunc("/", )
-	// result := WordCount(string(str))
-	// json, _ := json.MarshalIndent(result, "", " ")
-
 }
