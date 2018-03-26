@@ -16,8 +16,6 @@ class SimpleReactFileUpload extends React.Component {
   onFormSubmit(e){
     e.preventDefault() // Stop form submit
     this.fileUpload(this.state.file).then((response)=>{
-      console.log('IN HERE!!!!!!!!!!!', response)
-      console.log(response.data);
 
       if (this.props.onSuccess) {
         this.props.onSuccess(response.data)
@@ -38,7 +36,7 @@ class SimpleReactFileUpload extends React.Component {
             'content-type': 'multipart/form-data'
         }
     }
-    return  post(url, formData,config)
+    return  post(url, formData, config)
   }
 
   render() {
@@ -51,7 +49,5 @@ class SimpleReactFileUpload extends React.Component {
    )
   }
 }
-
-
 
 export default SimpleReactFileUpload

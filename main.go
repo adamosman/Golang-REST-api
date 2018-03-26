@@ -23,6 +23,7 @@ type ResponseBodyStruct struct {
 // Upload for files
 func Upload(w http.ResponseWriter, r *http.Request) {
 	var str string
+	var wordCount int
 	var countPairs []WordCountPair
 	counts := map[string]int{}
 
@@ -45,19 +46,21 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 	}
 
 	for _, word := range strings.Fields(str) {
+		if strings.Contains(word, "blue") {
+			continue
+		}
+		wordCount++
 		word = strings.Trim(word, ".,\"!-/:-@[-`{-~")
 		counts[word]++
 	}
 
+	// wordCount := len(strings.Fields(str))
 	for word, count := range counts {
 		var toAppend WordCountPair
 		toAppend.Word = word
 		toAppend.Count = count
 		countPairs = append(countPairs, toAppend)
 	}
-
-	// countPairsJSON, _ := json.MarshalIndent(countPairs, "", " ")
-	wordCount := len(strings.Fields(str))
 
 	var responseBody ResponseBodyStruct
 	responseBody.WordCount = wordCount
@@ -67,24 +70,7 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	responseJSON, _ := json.MarshalIndent(responseBody, "", "")
 
-	// writeToDisk({})
-
 	w.Write(responseJSON)
-}
-
-// WordCount counts the frequency of each word
-func WordCount(str string) map[string]int {
-	counts := map[string]int{}
-	for _, word := range strings.Fields(str) {
-		counts[word]++
-	}
-	return counts
-}
-
-// TotalWordCount counts total number of words
-func TotalWordCount(s string) int {
-	words := strings.Fields(s)
-	return len(words)
 }
 
 func main() {
