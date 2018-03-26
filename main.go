@@ -23,9 +23,8 @@ type ResponseBodyStruct struct {
 // Upload for files
 func Upload(w http.ResponseWriter, r *http.Request) {
 	var str string
-	counts := map[string]int{}
-
 	var countPairs []WordCountPair
+	counts := map[string]int{}
 
 	if r.Method == http.MethodPost {
 		f, _, err := r.FormFile("usrfile")
@@ -46,6 +45,7 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 	}
 
 	for _, word := range strings.Fields(str) {
+		word = strings.Trim(word, ".,\"!-/:-@[-`{-~")
 		counts[word]++
 	}
 
