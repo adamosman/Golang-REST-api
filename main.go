@@ -54,7 +54,6 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 		counts[word]++
 	}
 
-	// wordCount := len(strings.Fields(str))
 	for word, count := range counts {
 		var toAppend WordCountPair
 		toAppend.Word = word
@@ -68,7 +67,7 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("CONTENT-TYPE", "application/json; charset=UTF-8")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	responseJSON, _ := json.MarshalIndent(responseBody, "", "")
+	responseJSON, _ := json.MarshalIndent(responseBody, "", " ")
 
 	w.Write(responseJSON)
 }
