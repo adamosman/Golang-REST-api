@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import logo from "./MediaMath-RGB_Logo-white.png";
 import "./App.css";
 import ReactFileUpload from "./ReactFileUpload";
 
@@ -30,24 +30,22 @@ class App extends Component {
           <div>
             <h1>There are {this.state.wordCount} words</h1>
             <table>
-              <tableBody style={{ width: 1000 }}>
-                <thead>
-                  <tr>
-                    <th>Word</th>
-                    <th>Count</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {this.state.wordCountPairs.map(pair => {
-                    return (
-                      <tr>
-                        <td>{pair.word}</td>
-                        <td>{pair.count}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </tableBody>
+              <thead>
+                <tr>
+                  <th>Word</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.wordCountPairs.map(pair => {
+                  return (
+                    <tr>
+                      <td>{pair.word}</td>
+                      <td>{pair.count}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
             </table>
           </div>
         ) : null}

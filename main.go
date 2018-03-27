@@ -67,13 +67,15 @@ func Upload(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("CONTENT-TYPE", "application/json; charset=UTF-8")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	responseJSON, _ := json.MarshalIndent(responseBody, "", " ")
+	responseJSON, _ := json.Marshal(responseBody)
 
 	w.Write(responseJSON)
+	// fmt.Println(string(responseJSON)) // checking output of JSON
 }
 
 func main() {
 	http.HandleFunc("/", Upload)
 	log.Println("Listening on Port 8000")
 	http.ListenAndServe(":8000", nil)
+
 }

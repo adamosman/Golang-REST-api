@@ -1,4 +1,5 @@
 import React from 'react'
+// eslint-disable-next-line
 import axios, { post } from 'axios';
 
 class SimpleReactFileUpload extends React.Component {
@@ -36,7 +37,7 @@ class SimpleReactFileUpload extends React.Component {
             'content-type': 'multipart/form-data'
         }
     }
-    return  post(url, formData, config)
+    return post(url, formData, config)
   }
 
   render() {
