@@ -21,7 +21,7 @@ $ npm start
 ```
 This will launch a new window in your browser set to [http://localhost:3000](http://localhost:3000)
 
-![Image of API](https://preview.ibb.co/fT2bpn/Screen_Shot_2018_03_27_at_8_30_18_PM.png)
+![Image of API](https://image.ibb.co/cfzXx7/Screen_Shot_2018_03_28_at_9_12_18_AM.png)
 
 In a new terminal window, navigate to the `Golang-REST-api` folder to build and run the `main.go` file:
 ```

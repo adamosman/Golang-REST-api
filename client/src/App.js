@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./MediaMath-RGB_Logo-white.png";
+import logo from "./go_gopher.png";
 import "./App.css";
 import ReactFileUpload from "./ReactFileUpload";
 
