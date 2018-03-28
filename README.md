@@ -1,6 +1,6 @@
 # Golang RESTful API
 
-A simple RESTful web service that exposes an endpoint to upload an ASCII text file and parses it for total word count, number of occurrences of each word, and removes any word that contains \'93blue\'94 (i.e. blueberry, bluegrass, bluekai, etc.)\
+A simple RESTful web service that exposes an endpoint to upload an ASCII text file and parses it for total word count, number of occurrences of each word, and removes any word that contains 'blue' (i.e. blueberry, bluegrass, bluekai, etc.)\
 
 ## Getting Started / Prerequisites
 
