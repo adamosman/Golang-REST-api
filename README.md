@@ -1,6 +1,6 @@
 # Golang RESTful API
 
-A simple RESTful web service that exposes an endpoint to upload an ASCII text file and parses it for total word count, number of occurrences of each word, and removes any word that contains 'blue' (i.e. blueberry, bluegrass, bluekai, etc.)\
+A simple RESTful web service that exposes an endpoint to upload an ASCII text file and parses it for total word count, number of occurrences of each word, and removes any word that contains 'blue' (i.e. blueberry, bluegrass, bluekai, etc.)
 
 ## Getting Started / Prerequisites
 
@@ -34,7 +34,7 @@ On the browser, upload an arbitrary ASCII text file from your disk and select 'U
 
 Below the header a list will appear showing the number of occurences for each word in the file, as well as the total word count.
 
-![Image of completed upload](https://image.ibb.co/mrT7Un/Screen_Shot_2018_03_27_at_8_49_15_PM.png)
+![Image of completed upload](https://image.ibb.co/kimSUn/Screen_Shot_2018_03_27_at_9_20_22_PM.png)
 
 ## Acknowledgments
 
