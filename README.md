@@ -10,7 +10,7 @@ A simple RESTful web service that exposes an endpoint to upload an ASCII text fi
 
 ### Installing
 
-Navigate to the `client` folder and then install Node dependencies:
+Navigate to the `client` folder and then install the Node dependencies:
 ```
 $ cd ~/Golang-REST-api/client
 $ npm install
@@ -36,22 +36,8 @@ Below the header a list will appear showing the number of occurences for each wo
 
 ![Image of completed upload](https://image.ibb.co/mrT7Un/Screen_Shot_2018_03_27_at_8_49_15_PM.png)
 
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Adam Osman** - *Initial work* - [Adamosman](https://github.com/adamosman)
-
-
 ## Acknowledgments
 
 * AshikNesin for the [front-end file upload](https://gist.github.com/AshikNesin/e44b1950f6a24cfcd85330ffc1713513#file-react-file-upload-js)
-* GoesToEleven for help with the back-end [file upload](https://github.com/GoesToEleven/golang-web-dev/blob/5af87d51b744cca83b945c851a7cf8aaf3e0687f/000_temp/42_class/04/main.go)
+* GoesToEleven for help with the [back-end file upload](https://github.com/GoesToEleven/golang-web-dev/blob/5af87d51b744cca83b945c851a7cf8aaf3e0687f/000_temp/42_class/04/main.go)
 
